@@ -935,8 +935,8 @@ GameObject:
   - component: {fileID: 4533751481361064478}
   - component: {fileID: 4533751481361064479}
   - component: {fileID: 4533751481361064473}
-  - component: {fileID: 4533751481361064474}
   - component: {fileID: 4533751481361064471}
+  - component: {fileID: 6443319385784586783}
   m_Layer: 0
   m_Name: Astronauta
   m_TagString: Player
@@ -960,6 +960,7 @@ Transform:
   - {fileID: 6851134486419325461}
   - {fileID: 8437977009481777046}
   - {fileID: 1261133894196054795}
+  - {fileID: 473137071512693459}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1009,10 +1010,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.29338938
-  m_Height: 1.8455923
+  m_Radius: 0.26556075
+  m_Height: 1.7954515
   m_Direction: 1
-  m_Center: {x: -0.012108624, y: 0.8234005, z: -0.05636686}
+  m_Center: {x: 0.010148525, y: 0.84847087, z: -0.05636686}
 --- !u!114 &4533751481361064477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,6 +1060,12 @@ MonoBehaviour:
   - Type: 1
     SynchronizeType: 0
     Name: VelY
+  - Type: 4
+    SynchronizeType: 0
+    Name: salte
+  - Type: 4
+    SynchronizeType: 0
+    Name: tocoSuelo
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
@@ -1093,23 +1100,6 @@ MonoBehaviour:
   beams: {fileID: 0}
   Health: 1
   PlayerUiPrefab: {fileID: 0}
---- !u!114 &4533751481361064474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3614832640816863410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b13a26b944052264fbb3506c1998cfc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadMovimiento: 5
-  velocidadRotacion: 200
-  animator: {fileID: 0}
-  x: 0
-  y: 0
 --- !u!114 &4533751481361064471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,6 +1117,26 @@ MonoBehaviour:
   centerOffset: {x: 0, y: 0, z: 0}
   followOnStart: 0
   smoothSpeed: 0.125
+--- !u!114 &6443319385784586783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614832640816863410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97fcc6479fb023f46b047bd4b7141bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 4533751481361064475}
+  fuerzaSalto: 8
+  puedoSaltar: 0
+  velocidadMovimiento: 5
+  velocidadRotacion: 200
+  animator: {fileID: 8034856430641993842}
+  x: 0
+  y: 0
 --- !u!1 &3942893641738124141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,6 +1858,66 @@ Transform:
   m_Father: {fileID: 1875358504378308024}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6264920310230015058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 473137071512693459}
+  - component: {fileID: 2839599768619046174}
+  - component: {fileID: 6264964724694016879}
+  m_Layer: 0
+  m_Name: pies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &473137071512693459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264920310230015058}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4134770165203075592}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &2839599768619046174
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264920310230015058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.2098169
+  m_Height: 0.48649248
+  m_Direction: 1
+  m_Center: {x: 0.010177404, y: 0.13827838, z: -0.05636686}
+--- !u!114 &6264964724694016879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264920310230015058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd870beeb1548e49bda91fa08a2fdf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logicaPersona1: {fileID: 6443319385784586783}
 --- !u!1 &6378798775526796314
 GameObject:
   m_ObjectHideFlags: 0

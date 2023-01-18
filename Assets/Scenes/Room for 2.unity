@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4702,6 +4702,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 6757929850336326717, guid: b511489e37e6f61459cbd5ae7607384c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323905192062187106, guid: b511489e37e6f61459cbd5ae7607384c, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b511489e37e6f61459cbd5ae7607384c, type: 3}
 --- !u!4 &728242646 stripped
@@ -8185,7 +8193,7 @@ PrefabInstance:
     - target: {fileID: 5674431460016944334, guid: e62035e87892b8d47a41c83697493782, type: 3}
       propertyPath: playerPrefab
       value: 
-      objectReference: {fileID: 3614832640816863410, guid: b9f580ef712804df59ea7a66e48dfbb9, type: 3}
+      objectReference: {fileID: 3614832640816863410, guid: 40c65bd282689874c827ec5ebd83bbcc, type: 3}
     - target: {fileID: 8998829839997185477, guid: e62035e87892b8d47a41c83697493782, type: 3}
       propertyPath: m_Name
       value: Game Manager
