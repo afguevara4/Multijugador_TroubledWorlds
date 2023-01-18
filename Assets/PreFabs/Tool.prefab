@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1df7a66de064b85bbf17a9b992b722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objPuntos: {fileID: 0}
+  puntosQueda: 50
 --- !u!64 &49266176123162569
 MeshCollider:
   m_ObjectHideFlags: 0

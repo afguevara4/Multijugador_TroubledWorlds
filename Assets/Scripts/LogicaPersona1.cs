@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
-public class LogicaPersona1 : MonoBehaviour
+public class LogicaPersona1 : MonoBehaviourPun
 {
     public Rigidbody rb;
     public float fuerzaSalto = 8f;
@@ -35,6 +36,15 @@ public class LogicaPersona1 : MonoBehaviour
 
     void Update()
     {
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        {
+            return;
+        }
+        if (!animator)
+        {
+            return;
+        }
+
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
        

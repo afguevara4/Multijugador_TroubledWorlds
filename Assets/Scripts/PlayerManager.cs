@@ -68,8 +68,8 @@ namespace Com.GuevaraA.MyGame
             {
                 if (photonView.IsMine)
                 {
-                    ProcessInputs();
-                    //_cameraWork.OnStartFollowing();
+                    //ProcessInputs();
+                    _cameraWork.OnStartFollowing();
                 }
             }
             else

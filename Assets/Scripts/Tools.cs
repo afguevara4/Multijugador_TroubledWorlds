@@ -6,6 +6,9 @@ public class Tools : MonoBehaviour
 {
     public static int coinCount = 0;
 
+    public GameObject objPuntos;
+    public float puntosQueda;
+
     private void Start()
     {
         Tools.coinCount = Tools.coinCount + 1;
@@ -15,7 +18,7 @@ public class Tools : MonoBehaviour
     {
         if (otherCollider.CompareTag("Player") == true)
         {
-
+            objPuntos.GetComponent<Points>().puntos += puntosQueda;
         }
         Tools.coinCount--;
         Debug.Log("recogida de moneda" + Tools.coinCount + "tools");
