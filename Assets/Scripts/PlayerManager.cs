@@ -18,7 +18,6 @@ namespace Com.GuevaraA.MyGame
 
         [Tooltip("The Beams GameObject to control")]
         [SerializeField]
-        private GameObject beams;
         //True, when the user is firing
         bool IsFiring;
         [Tooltip("The current Health of our player")]
@@ -44,14 +43,6 @@ namespace Com.GuevaraA.MyGame
 
         void Awake()
         {
-            if (beams == null)
-            {
-                Debug.LogError("<Color=Red><a>Missing</a></Color> Beams Reference.", this);
-            }
-            else
-            {
-                beams.SetActive(false);
-            }
             if (photonView.IsMine)
             {
                 PlayerManager.LocalPlayerInstance = this.gameObject;
@@ -95,11 +86,6 @@ namespace Com.GuevaraA.MyGame
         void Update()
         {
 
-            // trigger Beams active state
-            if (beams != null && IsFiring != beams.activeInHierarchy)
-            {
-                beams.SetActive(IsFiring);
-            }
             if (photonView.IsMine)
             {
                 ProcessInputs();

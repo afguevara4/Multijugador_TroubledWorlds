@@ -1012,9 +1012,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe4afe00d2f5ab448f9982408ece196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beams: {fileID: 0}
+  IsFiring: 0
   Health: 1
-  PlayerUiPrefab: {fileID: 0}
+  PlayerUiPrefab: {fileID: 7148878608259707357, guid: 012a5509a9cb59149bc8f48cff2ccede, type: 3}
 --- !u!114 &4533751481361064471
 MonoBehaviour:
   m_ObjectHideFlags: 0
